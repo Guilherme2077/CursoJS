@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teste de JS</title>
+    <style>
+        body {
+            background-image: linear-gradient(to right, lightblue, lightgreen);
+        }
+        h1, h2, script {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <h1>Sejam bem vindos ao nosso 1º teste de JS</h1>
+    <h2>E suas informações são as seguintes:</h2>
+    <script>
+        var nome = window.prompt("Digite o seu nome: ");
+        var n1 = parseFloat(window.prompt("Informe a sua primeira nota: "));
+        var n2 = parseFloat(window.prompt("Digite sua segunda nota: "));
+        var n3 = parseFloat(window.prompt("Agora sua terceira nota: "));
+        var idade = parseInt(window.prompt("Agora me diga sua idade: "));
+        var media = (n1 + n2 + n3) / 3;
+        var pmedia = parseFloat(7-media)
+        var ppmedia = parseFloat(pmedia*3)
+
+        document.write(`Seu nome é ${nome}.<br>`);
+        document.write(idade >= 18?`Sua idade é ${idade} anos, você é maior de idade.<br>`:`Sua idade é ${idade} anos, você é menor de idade.<br>`);
+        document.write(`Sua média escolar foi de ${media.toFixed(2).replace('.', ',')} pontos.<br>`);
+        document.write(media >= 7?"Parabéns! Você foi aprovado!":`Que pena, sua média ficou abaixo do necessário para aprovação. Estude um pouco mais. <br>Você precisaria tirar mais ${ppmedia.toFixed(2).replace('.', ',')} pontos para ser aprovado.`)
+    </script>
+</body>
+</html>
