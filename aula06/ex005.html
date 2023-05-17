@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Primeiros passos com DOM</title>
+    <style>
+        body {
+            background: rgb(0, 77, 70);
+            color: aliceblue;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <h1>Iniciando estudos com <strong>DOM</strong></h1>
+    <p>Aqui vai o resultado</p>
+    <p>Aprendendo a usar o <strong>DOM</strong> em JavaScript.</p>
+    <div class="msg">Clique em mim</div>
+    <script>
+        var p1 = window.document.getElementsByTagName('p')[0] //window.document diz que algo será escrito na tela, e o .getElementsByTagName, diz que o que será escrito será capturado pelo nome da tag, neste caso a tag escolhida foi p, dentro de aspas e dentro de parêntesis e dentro dos colchetes está o número que representa qual das tags p foi a selecionada
+
+        window.document.write('Está escrito assim: ' + p1.innerText) //Esse innerText vai capturar o que estiver dentro do texto do p1 // O window.document.write quer dizer que algo será escrito, algo este que está colocado dento de aspas e dentro de parêntesis.
+
+        var d = window.document.querySelector('div.msg')
+        d.style.background = 'blue'//Aqui o que foi feito foi basicamente criar uma variável d em que se está selecionando a div cuja classe é msg. E logo em seguida, alterando o style dela, especificamente o background, alterando sua cor para blue.
+    </script>
+</body>
+</html>
