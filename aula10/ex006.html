@@ -21,5 +21,32 @@
     <div id="area">
         Interaja...
     </div>
+    <script>
+        var a = window.document.getElementById('area')
+        a.addEventListener('mousedown', desceu)
+        a.addEventListener('mouseup', subiu)
+        a.addEventListener('mouseenter', entrar)
+        a.addEventListener('mouseout', sair)
+        // A seção de Listeners que foram adicionadas acima, podem ser feitas em HTML também, sendo feitas como parâmetros da div, no caso, cujo id é 'area'. Já nas linhas acima, estamos apenas dizendo que a variável 'a' tem o parâmetro addEventListener() e cada palavra após a vírgula leva a uma função, estando elas logo abaixo:
+
+        function desceu() {
+            a.innerText = 'Desceu!'
+            a.style.background = 'brown'
+        }
+
+        function subiu() {
+            a.innerText = 'Subiu!'
+            a.style.background = 'purple'
+        }
+
+        function entrar() {
+            a.innerText = 'Entrou!'
+            a.style.background = 'blue'
+        }
+        function sair() {
+            a.innerText = 'Saiu!'
+            a.style.background = 'green'
+        }
+    </script>
 </body>
 </html>
